@@ -6,7 +6,7 @@ const CinemaHall = ({ selectedSeats, onSeatSelect }) => {
   const rows = 8;
   const seatsPerRow = 10;
   
-  // Генеруємо ID місць у форматі "Ряд-Місце" (наприклад, "1-3")
+  // Генеруємо ID місць у форматі "Ряд-Місце" ( "1-3")
   const generateSeats = () => {
     const seats = [];
     for (let row = 1; row <= rows; row++) {
