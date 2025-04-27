@@ -5,7 +5,7 @@ import { movies } from '../data/movies';
 const Home = () => {
   return (
     <div className="app">
-      <h1 className="app-title">Кінотеатр "Синема"</h1>
+      <h1 className="app-title">LNU Ciname 🎬</h1>
       <MovieList movies={movies} />
     </div>
   );
