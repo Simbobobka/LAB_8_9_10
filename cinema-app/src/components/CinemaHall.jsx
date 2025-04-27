@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 
 const CinemaHall = ({ selectedSeats, onSeatSelect }) => {
   // Створюємо схему залу - 8 рядів по 10 місць
-  const rows = 8;
-  const seatsPerRow = 10;
+  const rows = 12;
+  const seatsPerRow = 7;
   
   // Генеруємо ID місць у форматі "Ряд-Місце" ( "1-3")
   const generateSeats = () => {
