@@ -236,10 +236,21 @@ background-size: var(--s) calc(var(--s) * 0.577);
   color: #f77f00;
   background-color: #2b2d42;
   border-radius: 2rem;
+  text-align: center; /* Додаємо вирівнювання тексту по центру */
 }
 
 .booking-page h2 {
   margin-bottom: 10px;
+  /* Додаткові стилі для заголовка */
+  font-size: 2rem;
+  color: #fff;
+}
+
+.booking-page p {
+  /* Стилі для параграфа */
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #f8edeb;
 }
 
 /* Стилі для кінозалу */
