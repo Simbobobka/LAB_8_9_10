@@ -8,7 +8,8 @@ const MovieCard = ({ movie }) => {
       month: 'long', 
       day: 'numeric',
       hour: '2-digit', 
-      minute: '2-digit' 
+      minute: '2-digit',
+      weekday: 'short' 
     };
     return new Date(dateString).toLocaleDateString('uk-UA', options);
   };

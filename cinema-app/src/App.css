@@ -58,6 +58,9 @@ body {
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .movie-card:hover {
@@ -73,6 +76,9 @@ body {
 
 .movie-info {
   padding: 15px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
 .movie-title {
@@ -88,16 +94,19 @@ body {
 }
 
 .movie-description {
-  margin: 0 0 10px;
+  margin: 0 0 15px;
   font-size: 0.9rem;
   line-height: 1.4;
+  flex-grow: 1;
 }
 
 .movie-session {
-  margin: 0;
+  margin: 10px 0 0;
   font-size: 0.9rem;
   color: #e50914;
   font-weight: bold;
+  padding-top: 10px;
+  border-top: 1px solid #eee;
 }
 
 /* Responsive styles */
@@ -114,5 +123,55 @@ body {
   
   .movie-list {
     grid-template-columns: 1fr;
+  }
+}
+.filters-container {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.filter-select {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  min-width: 180px;
+  background-color: white;
+}
+
+.filter-select:focus {
+  border-color: #e50914;
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  outline: none;
+  transition: border-color 0.3s;
+  min-width: 250px;
+}
+
+.search-input:focus {
+  border-color: #e50914;
+}
+
+/* Адаптація для малих екранів */
+@media (max-width: 768px) {
+  .filters-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .search-input,
+  .filter-select {
+    width: 100%;
+    min-width: auto;
   }
 }
