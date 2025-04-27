@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useNavigate } from 'react-router-dom';
 
 const MovieCard = ({ movie }) => {
+  const navigate = useNavigate();
+  
   const formatDate = (dateString) => {
     const options = { 
       year: 'numeric', 
@@ -14,6 +17,10 @@ const MovieCard = ({ movie }) => {
     return new Date(dateString).toLocaleDateString('uk-UA', options);
   };
 
+  const handleBookClick = () => {
+    navigate(`/booking/${movie.id}`);
+  };
+
   return (
     <div className="movie-card">
       <img src={movie.poster} alt={movie.title} className="movie-poster" />
@@ -21,7 +28,12 @@ const MovieCard = ({ movie }) => {
         <h3 className="movie-title">{movie.title}</h3>
         <p className="movie-genre">{movie.genre}</p>
         <p className="movie-description">{movie.description}</p>
-        <p className="movie-session">Сеанс: {formatDate(movie.sessionTime)}</p>
+        <div className="movie-footer">
+          <p className="movie-session">Сеанс: {formatDate(movie.sessionTime)}</p>          
+        </div>
+        <button onClick={handleBookClick} className="book-button">
+            Забронювати
+        </button>
       </div>
     </div>
   );
