@@ -6,8 +6,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #f5f5f5;
-  color: #333;
+  background-color: #14213d;
+  color: #32213a;
 }
 
 .app {
@@ -18,7 +18,7 @@ body {
 
 .app-title {
   text-align: center;
-  color: #e50914;
+  color: #f77f00;
   margin-bottom: 30px;
 }
 
@@ -41,7 +41,7 @@ body {
 }
 
 .search-input:focus {
-  border-color: #e50914;
+  border-color: #f77f00;
 }
 
 /* Movie list styles */
@@ -53,7 +53,7 @@ body {
 
 /* Movie card styles */
 .movie-card {
-  background: white;
+  background: #fe7f2d;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ body {
 
 .movie-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 30px 1px rgba(255, 255, 255, 0.892);
 }
 
 .movie-poster {
@@ -84,13 +84,13 @@ body {
 .movie-title {
   margin: 0 0 10px;
   font-size: 1.2rem;
-  color: #e50914;
+  color: #fbf7f4;
 }
 
 .movie-genre {
   margin: 0 0 10px;
   font-size: 0.9rem;
-  color: #666;
+  color: #edf2f4;
 }
 
 .movie-description {
@@ -103,7 +103,7 @@ body {
 .movie-session {
   margin: 10px 0 0;
   font-size: 0.9rem;
-  color: #e50914;
+  color: #14213d;
   font-weight: bold;
   padding-top: 10px;
   border-top: 1px solid #eee;
@@ -145,7 +145,7 @@ body {
 }
 
 .filter-select:focus {
-  border-color: #e50914;
+  border-color: #f77f00;
 }
 
 .search-input {
@@ -159,7 +159,7 @@ body {
 }
 
 .search-input:focus {
-  border-color: #e50914;
+  border-color: #f77f00;
 }
 
 /* Адаптація для малих екранів */
