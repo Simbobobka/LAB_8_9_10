@@ -4,7 +4,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import CinemaHall from '../components/CinemaHall';
 import BookingForm from '../components/BookingForm';
 import { BookingService } from '../services/BookingService';
-import { toast } from 'react-toastify';
+import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { movies } from '../data/movies';
 const Booking = () => {
@@ -50,7 +50,9 @@ const Booking = () => {
 
     BookingService.addBooking(booking);
     toast.success('Бронювання успішно завершено!');
-    navigate('/');
+    const booked = BookingService.getBookedSeats(parseInt(movieId));
+    setBookedSeats(booked);
+    //navigate('/');
   };
 
   if (!movie) return <div>Завантаження...</div>;
@@ -81,6 +83,10 @@ const Booking = () => {
           onCancel={() => setShowForm(false)}
         />
       )}
+            <ToastContainer
+        position="top-right"
+        
+      />
     </div>
   );
 };

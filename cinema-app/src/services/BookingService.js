@@ -17,5 +17,10 @@ export const BookingService = {
       const updatedBookings = [...allBookings, bookingData];
       localStorage.setItem('movieBookings', JSON.stringify(updatedBookings));
       return bookingData;
+    },
+
+    getBookedSeats(movieId){
+      const bookings = this.getAllBookings();
+      return bookings.reduce((seats,booking) => [...seats, ...booking.seats], []);
     }
   };
